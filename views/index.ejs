@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kode Weather Apps</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700">
+    <link href="/public/css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <fieldset>
+            <form action="/" method="post">
+                    <input type="text" class="ghost-input" name="city" placeholder="Enter city name" required>
+                    <input type="submit" class="ghost-button" value="Get Weather">
+            </form>
+            <% if (weather !== null) { %>
+                <p><%= weather %></p>
+                <% } %>
+                <% if (error !== null) {%>
+                    <p><%= error %></p>
+                    <% } %>
+
+        </fieldset>
+
+    </div>
+</body>
+</html>
